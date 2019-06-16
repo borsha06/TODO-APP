@@ -7,7 +7,7 @@ export const addTask=(task) =>{
 }
 export const deleteTask =(taskid)=>{
     return{
-        typee: 'DELETE_TASK',
+        type: 'DELETE_TASK',
         payload: taskid
     }
 }
