@@ -13,8 +13,7 @@ import Task from '../Task/index'
                     </tr>
                 </thead>
                 <tbody>
-               
-                    {this.props.tasks.map((task,index)=> <Task key={index} task={task}/>)}
+               {this.props.tasks.map((task,index)=> <Task key={index} task={task}/>)}
                 </tbody>
             </table>
 

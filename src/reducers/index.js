@@ -1,19 +1,17 @@
 import {combineReducers} from 'redux'
-const initialState={
-    id:0
-}
+const initialState=[]
 const taskReducer = (state = initialState, action )=>{
     switch(action.type){
         case 'ADD_TASK':
             return [
                 ...state,
-                {
-                  id: state.length}]
+                action.payload]
            
         case 'DELETE_TASK':
-            return state.filter(todo =>
-                todo.id !== action.id
-              );
+            return [state.slice().splice(action.payload,1)]
+            // state = state.slice()
+            // state.splice(action.payload,1)
+            // break
             
         default:
             return state
